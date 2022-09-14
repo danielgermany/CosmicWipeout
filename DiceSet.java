@@ -10,9 +10,18 @@ public class DiceSet {
      * @param diceSetSize
      * @param dieInfo
      */
-    public DiceSet(int diceSetSize, ArrayList<String> dieInfo) {
+    public DiceSet(int diceSetSize) {
         this.diceSetSize = diceSetSize;
+        ArrayList<String> dieInfo = new ArrayList<String>(diceSetSize);
         this.dieInfo = dieInfo;
+    }
+
+    public void rollSet() {
+        for (int i = 0; i < diceSetSize; i++) {
+            Die die = new Die();
+            die.roll();
+            this.dieInfo.add(die.value);
+        }
     }
 
 }

@@ -1,24 +1,9 @@
 public class CosmicWipeout {
-    public String[] Ruleset(int[] set) {
-        String[] correctedSet = new String[6];
+    public static void main(String[] args) {
+        DiceSet set = new DiceSet(5);
+        set.rollSet();
+        Player Player1 = new Player(set.dieInfo);
 
-        for (int i = 0; i < set.length; i++) {
-            switch (set[i]) {
-                case 1:
-                    correctedSet[i] = "Swirls";
-                case 2:
-                    correctedSet[i] = "triangular glyphs";
-                case 3:
-                    correctedSet[i] = "lighting bolts";
-                case 4:
-                    correctedSet[i] = "5";
-                case 5:
-                    correctedSet[i] = "starts";
-                case 6:
-                    correctedSet[i] = "10";
-            }
-        }
-        return correctedSet;
     }
 
     public int CalculateScore(String[] set) {

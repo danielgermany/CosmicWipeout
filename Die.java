@@ -7,18 +7,15 @@ public class Die {
             List.of("swirls", "triangular glyphs", "lighting bolts", "5", "starts", "10"));
     String value;
 
-    public Die(String value) {
-        this.value = value;
+    // constructor
+    public Die() {
+        this.value = null;
     }
 
-    public String roll() {
+    // Rolls and returns one of the 6 strings into value of the object
+    public void roll() {
         String value = RULEINFO.get((int) Math.floor(Math.random() * RULEINFO.size()));
-        return value;
+        this.value = value;
 
-    }
-
-    public static void main(String[] args) {
-        Die TestDie = new Die(null);
-        System.out.println(TestDie.roll());
     }
 }
