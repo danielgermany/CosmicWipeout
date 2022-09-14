@@ -25,6 +25,7 @@ public class CosmicWipeout {
         int score = 0;
         int counter_5 = 0;
         int counter_10 = 0;
+        int scoringdie = 0;
         for (int i = 0; i < set.length; i++) {
             switch (set[i]) {
                 case "5":
@@ -42,8 +43,9 @@ public class CosmicWipeout {
         if (counter_10 == 3) {
             score += 70;
         }
+        scoringdie = counter_10 + counter_5;
+        int diceleft = 6 - scoringdie;
 
-        int diceleft = 6 - (counter_10 + counter_5);
         if (diceleft != 0) {
 
         }

@@ -1,22 +1,18 @@
+import java.util.ArrayList;
+
 public class DiceSet {
-    int roll() {
-        int value = (((int) Math.random()) % 6) + 1;
-        return value;
+    // instance variables
+    int diceSetSize;
+    ArrayList<String> dieInfo;
+
+    // Constructor
+    /**
+     * @param diceSetSize
+     * @param dieInfo
+     */
+    public DiceSet(int diceSetSize, ArrayList<String> dieInfo) {
+        this.diceSetSize = diceSetSize;
+        this.dieInfo = dieInfo;
     }
 
-    public int[] rollSet() {
-        int[] set = new int[5];
-        for (int i = 0; i < set.length; i++) {
-            set[i] = this.roll();
-        }
-        return set;
-    }
-
-    public int[] rereollSet(int diceleft) {
-        int[] set = new int[diceleft];
-        for (int i = 0; i < set.length; i++) {
-            set[i] = this.roll();
-        }
-        return set;
-    }
 }
