@@ -1,8 +1,11 @@
 
 public class CosmicWipeout {
+    //purpose: Run the game
+    //pre-conditions: None
+    //post-conditions: The game has been ran
     public static void main(String[] args) {
         Player Player1 = new Player();
-
+        
         while (Player1.Score < 500) {
             Round round = new Round();
             DiceSet set = new DiceSet(5);

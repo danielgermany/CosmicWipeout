@@ -5,14 +5,18 @@ public class Round {
     int Score;
     int avail_cubes;
     ArrayList<String> setInfo;
-
+    //purpose: Keeps track of rounds
+    //pre-conditions: None
+    //post-conditions: Object is constructed
     public Round() {
         this.setInfo = null;
         this.Score = 0;
         this.avail_cubes = 0;
 
     }
-
+    //purpose: calculates score
+    //pre-conditions: none
+    //post-conditions: score is calculated
     public void CalculateScore() {
         int score = 0;
         int scoring_cubes = 0;
