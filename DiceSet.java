@@ -21,7 +21,7 @@ public class DiceSet {
         for (int i = 0; i < diceSetSize; i++) {
             Die die = new Die();
             die.roll();
-            if(i == 5){
+            if(i == 4){
                 if(die.value == 3){
                     die.value = 1;
                 }
